@@ -19,7 +19,7 @@ class CreateOhShitItsBrokeModelsTable extends Migration
             $table->string('first_name');
             $table->string('last_name');
             $table->date('dateOfTake');
-            $table->date('returned_at');
+            $table->date('returned_at')->nullable();
         });
     }
 

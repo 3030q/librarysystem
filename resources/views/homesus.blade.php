@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('header')
 
 @section('title')Главная страница@endsection
 

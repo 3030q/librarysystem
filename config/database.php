@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => env('php_RYBIN', 'pgsql'),
+    'default' => env('librarysystem_database', 'pgsql'),
 
     /*
     |--------------------------------------------------------------------------
