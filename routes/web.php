@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\RegisterUserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,10 +23,18 @@ Route::middleware('auth')->group(function (){
     });
 
 });
+
+
+Route::get('/userregister','App\Http\Controllers\RegisterUserController@registerUserView');
+Route::post('/userregisterconfirm','App\Http\Controllers\RegisterUserController@registerUserConfirm');
+
+
 Route::get('/registerorganization','App\Http\Controllers\Auth\OrganizationRegisterController@orgRegisterView')->name('orgRegisterView');
 Route::post('/confirmorg','App\Http\Controllers\Auth\OrganizationRegisterController@orgRegisterConfirm');
 
+
+
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', )->name('home');
 

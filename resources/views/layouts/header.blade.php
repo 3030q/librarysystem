@@ -37,13 +37,13 @@
                     </div>
 
                     <div class="col-sm nav-item btn btn btn-success">
-                        <a class="text-white" href="{{ route('login') }}">{{ __('Login') }}</a>
+                        <a class="text-white" href="/">{{ __('Login') }}</a>
                     </div>
 
                     <div class="col-sm">
                     @if (Route::has('register'))
                         <div class="col-sm nav-item btn btn btn-success">
-                            <a class="text-white" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            <a class="text-white" href="/userregister">{{ __('Register') }}</a>
                         </div>
                     </div>
                 </div>

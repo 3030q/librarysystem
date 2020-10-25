@@ -25,7 +25,7 @@ class OrganizationRegisterController extends Controller
         ]);
         $organization = new Organization();
         $organization->name = $request->name;
-        $organization->key = Hash::make($request->password);
+        $organization->key = $request->password;
         $organization->save();
         return redirect()->route('homesus');
     }

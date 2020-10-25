@@ -16,41 +16,21 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d61122eb-1b28-4251-9d82-0b76dc4e1487" name="Default Changelist" comment="``````">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/OrganizationRegisterController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Admin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Book.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Classes.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Organization.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Record.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2014_10_11_181441_create_organizations_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2014_10_11_182208_create_classes_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_22_183059_create_books_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_23_175717_create_admins_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_23_182604_create_records_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/study.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/study.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/organizationRegister.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/RegisterUserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/OrganizationRegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/OrganizationRegisterController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MainController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/about.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/about.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/confirm.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/confirm.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/homesus.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/homesus.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/reviews.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/reviews.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/header.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -199,7 +179,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -255,6 +235,9 @@
       <workItem from="1603401268066" duration="300000" />
       <workItem from="1603472600425" duration="8525000" />
       <workItem from="1603483856676" duration="12974000" />
+      <workItem from="1603639221241" duration="1288000" />
+      <workItem from="1603642297799" duration="1707000" />
+      <workItem from="1603662458139" duration="3198000" />
     </task>
     <task id="LOCAL-00001" summary="``````">
       <created>1603473053337</created>
@@ -263,7 +246,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603473053337</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="``````">
+      <created>1603639252675</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1603639252675</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -339,13 +329,15 @@
     </state>
     <state width="1256" height="171" key="GridCell.Tab.0.right/64.27.1302.741@64.27.1302.741" timestamp="1603381046582" />
     <state width="1248" height="172" key="GridCell.Tab.0.right/72.27.1294.741@72.27.1294.741" timestamp="1602774873511" />
-    <state x="204" y="31" width="1022" height="737" key="SettingsEditor" timestamp="1603380242969">
-      <screen x="64" y="27" width="1302" height="741" />
-    </state>
-    <state x="204" y="31" width="1022" height="737" key="SettingsEditor/64.27.1302.741@64.27.1302.741" timestamp="1603380242969" />
-    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1603488500404">
+    <state x="271" y="32" width="1022" height="737" key="SettingsEditor" timestamp="1603640125681">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
+    <state x="204" y="31" width="1022" height="737" key="SettingsEditor/64.27.1302.741@64.27.1302.741" timestamp="1603380242969" />
+    <state x="271" y="32" width="1022" height="737" key="SettingsEditor/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1603640125681" />
+    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1603639323824">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="591" y="289" key="Vcs.Push.Dialog.v2/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1603639323824" />
     <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1848.1053@72.27.1848.1053" timestamp="1603488500404" />
     <state x="172" y="127" width="1648" height="853" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1603481274810">
       <screen x="72" y="27" width="1848" height="1053" />
@@ -359,16 +351,18 @@
       <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state x="72" y="27" width="1248" height="697" key="dock-window-1/72.27.1294.741@72.27.1294.741" timestamp="1602764930841" />
-    <state x="516" y="236" width="960" height="963" key="run.anything.popup" timestamp="1603480737802">
+    <state x="516" y="236" width="960" height="963" key="run.anything.popup" timestamp="1603663460842">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="383" y="174" width="672" height="677" key="run.anything.popup/72.27.1294.741@72.27.1294.741" timestamp="1603310842390" />
+    <state x="516" y="236" width="960" height="963" key="run.anything.popup/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1603663460842" />
     <state x="516" y="236" width="960" height="963" key="run.anything.popup/72.27.1848.1053@72.27.1848.1053" timestamp="1603480737802" />
-    <state x="515" y="115" width="961" height="964" key="search.everywhere.popup" timestamp="1603495078205">
+    <state x="515" y="115" width="961" height="964" key="search.everywhere.popup" timestamp="1603662814875">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="376" y="89" width="677" height="678" key="search.everywhere.popup/64.27.1302.741@64.27.1302.741" timestamp="1603380156018" />
     <state x="382" y="89" width="672" height="678" key="search.everywhere.popup/72.27.1294.741@72.27.1294.741" timestamp="1603310740195" />
+    <state x="515" y="115" width="961" height="964" key="search.everywhere.popup/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1603662814875" />
     <state x="515" y="115" width="961" height="964" key="search.everywhere.popup/72.27.1848.1053@72.27.1848.1053" timestamp="1603495078205" />
     <state x="603" y="431" width="540" height="179" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1603480233942">
       <screen x="72" y="27" width="1848" height="1053" />
