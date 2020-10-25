@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\Organization;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -50,10 +51,14 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
+            'first_name' => ['required', 'string', 'max:255'],
+            'last_name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-        ]);
+            'phone_number'=>['required', 'string', 'min:10', 'max:10'],
+            'organization_name'=>['string', 'min:3','max:10'],
+            'key'=>['string'],
+            ]);
     }
 
     /**
@@ -64,10 +69,15 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        $model = Organization::query()->where('name',$data['organization_name'])->where('key', Hash::make($data['key']))->firstOrFail('id');
+
         return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-        ]);
+                'first_name' => $data['first_name'],
+                'last_name' => $data['last_name'],
+                'email' => $data['email'],
+                'password' => Hash::make($data['password']),
+                'phone_number'=> $data['phone_number'],
+                'organization_id'=>$model,
+            ]);
     }
 }

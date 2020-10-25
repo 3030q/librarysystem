@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'App\Http\Controllers\MainController@home');
+Route::get('/', 'App\Http\Controllers\MainController@home')->name('homesus');
 Route::middleware('auth')->group(function (){
     Route::prefix('allogs')->group(function (){
         Route::get('/', 'App\Http\Controllers\MainController@allogs')->name('logs');
@@ -23,8 +23,10 @@ Route::middleware('auth')->group(function (){
     });
 
 });
-
+Route::get('/registerorganization','App\Http\Controllers\Auth\OrganizationRegisterController@orgRegisterView')->name('orgRegisterView');
+Route::post('/confirmorg','App\Http\Controllers\Auth\OrganizationRegisterController@orgRegisterConfirm');
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+

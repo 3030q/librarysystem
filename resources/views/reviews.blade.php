@@ -1,4 +1,4 @@
-@extends('header')
+@extends('layouts.header')
 
 @section('title')Взятые книги@endsection
 

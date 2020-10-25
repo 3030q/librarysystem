@@ -19,17 +19,39 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d61122eb-1b28-4251-9d82-0b76dc4e1487" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" />
+    <list default="true" id="d61122eb-1b28-4251-9d82-0b76dc4e1487" name="Default Changelist" comment="``````">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/OrganizationRegisterController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Book.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Classes.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Organization.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Record.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2014_10_11_181441_create_organizations_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2014_10_11_182208_create_classes_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_22_183059_create_books_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_23_175717_create_admins_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_23_182604_create_records_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/image/study.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/image/study.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/auth/organizationRegister.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MainController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/OhShitItsBrokeModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/OhShitItsBrokeModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_15_095815_create_oh_shit_its_broke_models_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_15_095815_create_oh_shit_its_broke_models_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/about.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/about.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/confirm.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/confirm.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/homesus.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/homesus.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/reviews.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/reviews.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,18 +186,30 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1iss1cQgCIS1Ab9eyPjoUH3e5qb" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/auth" />
+      <recent name="$PROJECT_DIR$/resources/views" />
+      <recent name="$PROJECT_DIR$/app/Http/Controllers/Auth" />
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/" />
+    </key>
   </component>
   <component name="RunManager" selected="PHPUnit.laravelwithdb">
     <configuration name="laravelwithdb" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -219,8 +253,17 @@
       <workItem from="1603399155967" duration="1174000" />
       <workItem from="1603400340694" duration="437000" />
       <workItem from="1603401268066" duration="300000" />
-      <workItem from="1603472600425" duration="293000" />
+      <workItem from="1603472600425" duration="8525000" />
+      <workItem from="1603483856676" duration="12974000" />
     </task>
+    <task id="LOCAL-00001" summary="``````">
+      <created>1603473053337</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1603473053337</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,6 +281,11 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="``````" />
+    <option name="LAST_COMMIT_MESSAGE" value="``````" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="492" y="276" width="444" height="249" key="#Composer" timestamp="1602707507152">
       <screen x="72" y="27" width="1294" height="741" />
@@ -251,6 +299,18 @@
       <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state x="177" y="55" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.1294.741@72.27.1294.741" timestamp="1602707893033" />
+    <state x="652" y="355" width="678" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603486055850">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="652" y="355" width="678" height="403" key="#com.intellij.fileTypes.FileTypeChooser/72.27.1848.1053@72.27.1848.1053" timestamp="1603486055850" />
+    <state x="72" y="27" width="802" height="1053" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1603485879639">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="72" y="27" width="802" height="1053" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1603485879639" />
+    <state x="729" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603485992818">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="729" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1603485992818" />
     <state x="556" y="297" width="318" height="207" key="Github.ShareDialog" timestamp="1603387753487">
       <screen x="64" y="27" width="1302" height="741" />
     </state>
@@ -283,29 +343,39 @@
       <screen x="64" y="27" width="1302" height="741" />
     </state>
     <state x="204" y="31" width="1022" height="737" key="SettingsEditor/64.27.1302.741@64.27.1302.741" timestamp="1603380242969" />
-    <state x="800" y="244" width="381" height="626" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1603400369785">
+    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1603488500404">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="800" y="244" width="381" height="626" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/72.27.1848.1053@72.27.1848.1053" timestamp="1603400369785" />
+    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1848.1053@72.27.1848.1053" timestamp="1603488500404" />
+    <state x="172" y="127" width="1648" height="853" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1603481274810">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="172" y="127" width="1648" height="853" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1603481274809" />
+    <state x="800" y="244" width="381" height="633" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1603496067373">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="800" y="244" width="381" height="633" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/72.27.1848.1053@72.27.1848.1053" timestamp="1603496067373" />
     <state x="72" y="27" width="1248" height="697" key="dock-window-1" timestamp="1602764930841">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state x="72" y="27" width="1248" height="697" key="dock-window-1/72.27.1294.741@72.27.1294.741" timestamp="1602764930841" />
-    <state x="383" y="174" width="672" height="677" key="run.anything.popup" timestamp="1603310842390">
-      <screen x="72" y="27" width="1294" height="741" />
+    <state x="516" y="236" width="960" height="963" key="run.anything.popup" timestamp="1603480737802">
+      <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="383" y="174" width="672" height="677" key="run.anything.popup/72.27.1294.741@72.27.1294.741" timestamp="1603310842390" />
-    <state x="376" y="89" width="677" height="678" key="search.everywhere.popup" timestamp="1603380156018">
-      <screen x="64" y="27" width="1302" height="741" />
+    <state x="516" y="236" width="960" height="963" key="run.anything.popup/72.27.1848.1053@72.27.1848.1053" timestamp="1603480737802" />
+    <state x="515" y="115" width="961" height="964" key="search.everywhere.popup" timestamp="1603495078205">
+      <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="376" y="89" width="677" height="678" key="search.everywhere.popup/64.27.1302.741@64.27.1302.741" timestamp="1603380156018" />
     <state x="382" y="89" width="672" height="678" key="search.everywhere.popup/72.27.1294.741@72.27.1294.741" timestamp="1603310740195" />
-    <state x="603" y="431" width="540" height="179" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1603472858036">
+    <state x="515" y="115" width="961" height="964" key="search.everywhere.popup/72.27.1848.1053@72.27.1848.1053" timestamp="1603495078205" />
+    <state x="603" y="431" width="540" height="179" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1603480233942">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="438" y="311" width="540" height="179" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/64.27.1302.741@64.27.1302.741" timestamp="1603380158342" />
     <state x="444" y="311" width="540" height="179" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/72.27.1294.741@72.27.1294.741" timestamp="1603309412019" />
-    <state x="603" y="431" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1603472858036" />
+    <state x="603" y="431" width="540" height="179" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1603480233942" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/laravelwithdb@laravelwithdb.xml" NAME="laravelwithdb Coverage Results" MODIFIED="1603380810657" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

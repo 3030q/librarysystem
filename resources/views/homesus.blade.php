@@ -1,4 +1,4 @@
-@extends('header')
+@extends('layouts.header')
 
 @section('title')Главная страница@endsection
 
@@ -8,14 +8,14 @@
         <!-- Main jumbotron for a primary marketing message or call to action -->
         <div class="btn btn-info">
             <div class="container">
-                <h1 class="display-3">To logs!</h1>
+                <span class="display-3">Librasystem is powerfull service for library!</span>
                 <p>Lorem ipsum dolor sit amet, consectetur
                     adipisicing elit. Aspernatur at commodi ea
                     impedit itaque labore perspiciatis provident
                     quasi reiciendis voluptatibus. Aut eius eum
                     nam nisi nobis provident quas sint, voluptatem.
                 </p>
-                <p><a class="btn btn-success" href="/allogs" role="button">LOGS »</a></p>
+                <p><a class="btn btn-success" href="/registerorganization" role="button">Register Organization»</a></p>
             </div>
         </div>
 

@@ -13,6 +13,7 @@ class MainController extends Controller
     }
 
 
+
 /*    public function logs(){
        $allLogs=OhShitItsBrokeModel::all();
        var_dump($allLogs);
