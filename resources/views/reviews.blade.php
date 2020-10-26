@@ -20,13 +20,13 @@
         <input type="text" name="book" id="book" placeholder="Введите название книги" class="form-control"><br>
         <input type="text" name="first_name" id="first_name" placeholder="Введите имя того читателя, кто взял книгу" class="form-control"><br>
         <input type="text" name="last_name" id="last_name" placeholder="Введите фамилию того читателя, кто взял книгу" class="form-control"><br>
-        <input type="date" name="dateOfTake" id="takeDate"  placeholder="Дата"></input><br>
+        <input type="date" name="dateOfTake" id="takeDate"  placeholder="Дата"><br>
         <button type="submit" class="btn btn-success">Отправить</button>
     </form>
     <br>
     <h1>Взятые книжки</h1>
     @foreach($record as $el)
-        <div class="alert alert-warning">
+
             <h3>{{ $el->book}}</h3>
             <b>{{ $el->last_name}}</b>
             <p>{{ $el->first_name}}</p>

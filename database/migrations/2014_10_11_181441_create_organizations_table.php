@@ -17,6 +17,7 @@ class CreateOrganizationsTable extends Migration
             $table->id();
             $table->string('name')->unique();
             $table->string('key');
+            $table->string('admin_password');
             $table->timestamps();
         });
     }

@@ -20,7 +20,7 @@
 <body class="bg-dark text-white">
 
 <div class="d-flex flex-column flex-md-row align-items-center p-2 px-md-3 mb-3 bg-dark text-white border-bottom shadow-sm">
-    <img class="p-1" src="image/study.png" alt="icon" width="50" height="50">
+    <a href="/"><img class="p-1" src="image/study.png" alt="icon" width="50" height="50" ></a>
     <h5 class="my-0 mr-md-auto font-weight-normal">Librasystem</h5>
     <nav class="my-2 my-md-0 mr-md-3">
 
@@ -37,7 +37,7 @@
                     </div>
 
                     <div class="col-sm nav-item btn btn btn-success">
-                        <a class="text-white" href="/">{{ __('Login') }}</a>
+                        <a class="text-white" href="{{route('login')}}">{{ __('Login') }}</a>
                     </div>
 
                     <div class="col-sm">
@@ -55,19 +55,26 @@
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-right btn btn-success text-white " aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/profile"
+                               onclick="event.preventDefault();
+                                                         document.getElementById('ref').submit();">
+                                {{ __('Profile') }}
+                            </a>
+                            <form id="ref" action="/profile" method="GET" class="d-none">
+                                @csrf
+                            </form>
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                onclick="event.preventDefault();
                                                          document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
                             </a>
-
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                 @csrf
                             </form>
                         </div>
                     </div>
             @endguest
-        </a>
+        </div>
     </nav>
     <a class=" p-3 btn btn-info" href="/allogs">Take book</a>
 </div>

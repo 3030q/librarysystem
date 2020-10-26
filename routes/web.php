@@ -33,8 +33,11 @@ Route::get('/registerorganization','App\Http\Controllers\Auth\OrganizationRegist
 Route::post('/confirmorg','App\Http\Controllers\Auth\OrganizationRegisterController@orgRegisterConfirm');
 
 
+Route::get('/profile','App\Http\Controllers\ProfileController@profileView');
+
+
 
 Auth::routes();
 
-Route::get('/home', )->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

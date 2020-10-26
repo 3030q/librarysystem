@@ -24,13 +24,16 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d61122eb-1b28-4251-9d82-0b76dc4e1487" name="Default Changelist" comment="``````">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/RegisterUserController.php" afterDir="false" />
+    <list default="true" id="d61122eb-1b28-4251-9d82-0b76dc4e1487" name="Default Changelist" comment="release check link user-org">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ProfileController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/profile.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/OrganizationRegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/OrganizationRegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_11_181441_create_organizations_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_11_181441_create_organizations_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/organizationRegister.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/organizationRegister.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/reviews.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/reviews.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -237,7 +240,8 @@
       <workItem from="1603483856676" duration="12974000" />
       <workItem from="1603639221241" duration="1288000" />
       <workItem from="1603642297799" duration="1707000" />
-      <workItem from="1603662458139" duration="3198000" />
+      <workItem from="1603662458139" duration="3503000" />
+      <workItem from="1603722609425" duration="8771000" />
     </task>
     <task id="LOCAL-00001" summary="``````">
       <created>1603473053337</created>
@@ -253,7 +257,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603639252675</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="release check link user-org">
+      <created>1603665905358</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1603665905358</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,7 +285,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="``````" />
-    <option name="LAST_COMMIT_MESSAGE" value="``````" />
+    <MESSAGE value="release check link user-org" />
+    <option name="LAST_COMMIT_MESSAGE" value="release check link user-org" />
   </component>
   <component name="WindowStateProjectService">
     <state x="492" y="276" width="444" height="249" key="#Composer" timestamp="1602707507152">
@@ -334,35 +346,40 @@
     </state>
     <state x="204" y="31" width="1022" height="737" key="SettingsEditor/64.27.1302.741@64.27.1302.741" timestamp="1603380242969" />
     <state x="271" y="32" width="1022" height="737" key="SettingsEditor/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1603640125681" />
-    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1603639323824">
+    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1603665961054">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="591" y="289" key="Vcs.Push.Dialog.v2/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1603639323824" />
+    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1603665961054" />
     <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1848.1053@72.27.1848.1053" timestamp="1603488500404" />
-    <state x="172" y="127" width="1648" height="853" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1603481274810">
+    <state x="172" y="127" width="1638" height="860" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1603724817333">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
+    <state x="172" y="127" width="1638" height="860" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1603724817333" />
     <state x="172" y="127" width="1648" height="853" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1603481274809" />
     <state x="800" y="244" width="381" height="633" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1603496067373">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="800" y="244" width="381" height="633" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/72.27.1848.1053@72.27.1848.1053" timestamp="1603496067373" />
+    <state x="777" y="468" width="428" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603722638749">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="777" y="468" width="428" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1603722638749" />
     <state x="72" y="27" width="1248" height="697" key="dock-window-1" timestamp="1602764930841">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state x="72" y="27" width="1248" height="697" key="dock-window-1/72.27.1294.741@72.27.1294.741" timestamp="1602764930841" />
-    <state x="516" y="236" width="960" height="963" key="run.anything.popup" timestamp="1603663460842">
+    <state x="516" y="236" width="960" height="963" key="run.anything.popup" timestamp="1603724750487">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="383" y="174" width="672" height="677" key="run.anything.popup/72.27.1294.741@72.27.1294.741" timestamp="1603310842390" />
-    <state x="516" y="236" width="960" height="963" key="run.anything.popup/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1603663460842" />
+    <state x="516" y="236" width="960" height="963" key="run.anything.popup/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1603724750487" />
     <state x="516" y="236" width="960" height="963" key="run.anything.popup/72.27.1848.1053@72.27.1848.1053" timestamp="1603480737802" />
-    <state x="515" y="115" width="961" height="964" key="search.everywhere.popup" timestamp="1603662814875">
+    <state x="515" y="115" width="961" height="964" key="search.everywhere.popup" timestamp="1603730210525">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="376" y="89" width="677" height="678" key="search.everywhere.popup/64.27.1302.741@64.27.1302.741" timestamp="1603380156018" />
     <state x="382" y="89" width="672" height="678" key="search.everywhere.popup/72.27.1294.741@72.27.1294.741" timestamp="1603310740195" />
-    <state x="515" y="115" width="961" height="964" key="search.everywhere.popup/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1603662814875" />
+    <state x="515" y="115" width="961" height="964" key="search.everywhere.popup/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1603730210525" />
     <state x="515" y="115" width="961" height="964" key="search.everywhere.popup/72.27.1848.1053@72.27.1848.1053" timestamp="1603495078205" />
     <state x="603" y="431" width="540" height="179" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1603480233942">
       <screen x="72" y="27" width="1848" height="1053" />
