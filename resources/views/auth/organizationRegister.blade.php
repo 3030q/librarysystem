@@ -21,27 +21,6 @@
                             </div>
                         </div>
 
-                       {{-- <div class="form-group row">
-                            <label for="key" class="col-md-4 col-form-label text-md-right">{{ __('Input Key') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="key" type="password" class="form-control @error('key') is-invalid @enderror" name="key" required autocomplete="key">
-
-                                @error('key')
-                                <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="key-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Key') }}</label>
-                            <div class="col-md-6">
-                                <input id="key-confirm" type="password" class="form-control" name="key-confirm" required autocomplete="key">
-                            </div>
-                        </div>--}}
-
 
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password*') }}</label>

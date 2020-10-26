@@ -20,6 +20,13 @@
                 </h1>
             </div>
         @endif
+        @if(Auth::user()->role === 'admin')
+            <h2 class="text-center">Role in organization</h2>
+            <h1 class="text-center font-weight-bold">Admin</h1>
+        @else
+            <h2 class="text-center">Role in organization</h2>
+            <h1 class="text-center font-weight-bold">User</h1>
+        @endif
         <div class="font-size text-md-center te">
             <a href="/adminconfirm">You admin your organization?</a>
         </div>

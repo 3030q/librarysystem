@@ -33,7 +33,9 @@ Route::get('/registerorganization','App\Http\Controllers\Auth\OrganizationRegist
 Route::post('/confirmorg','App\Http\Controllers\Auth\OrganizationRegisterController@orgRegisterConfirm');
 
 
-Route::get('/profile','App\Http\Controllers\ProfileController@profileView');
+Route::get('/profile','App\Http\Controllers\ProfileController@profileView')->name('profile');
+Route::get('/adminconfirm', 'App\Http\Controllers\AdminConfirmController@adminConfirmView');
+Route::post('/adminconfirmreq', 'App\Http\Controllers\AdminConfirmController@adminConfirmReq');
 
 
 
