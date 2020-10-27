@@ -29,9 +29,6 @@
             <!-- Authentication Links -->
             @guest
                 <div class="row">
-                    <div class="col-sm ">
-                        <a class="nav-item btn btn btn-success" href="/">Home</a>
-                    </div>
 
                     <div class="col-sm nav-item btn btn btn-success">
                         <a class="text-white" href="{{route('login')}}">{{ __('Login') }}</a>
@@ -58,7 +55,7 @@
                         @endif
 
 
-                        <div class="nav-item dropdown btn btn-info text-white col-sm">
+                        <div class="p-3 nav-item dropdown btn btn-info text-white">
                            <a id="navbarDropdown" class="nav-link dropdown-toggle text-white" href="{{ route('logout') }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->first_name }}
                             </a>
@@ -81,14 +78,20 @@
                                     @csrf
                                 </form>
                             </div>
-
-
                         </div>
+                        @if(\Illuminate\Support\Facades\Auth::user()->role === 'admin')
+                            <div class="col-sm ">
+                                <a class="p-3 nav-item btn btn btn-info" href="/records">All records</a>
+                            </div>
+                        @else
+                            <div class="col-sm ">
+                                <a class="p-3 nav-item btn btn btn-info" href="/records">Take book</a>
+                            </div>
+                        @endif
                 </div>
             @endguest
         </div>
     </nav>
-    <a class=" p-3 btn btn-info" href="/allogs">Take book</a>
 </div>
 <div class="container mt-5">
     @yield('main_content')

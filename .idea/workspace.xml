@@ -27,10 +27,12 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d61122eb-1b28-4251-9d82-0b76dc4e1487" name="Default Changelist" comment="piece of lib">
+    <list default="true" id="d61122eb-1b28-4251-9d82-0b76dc4e1487" name="Default Changelist" comment="table + delete">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/RecordController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/record.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LibraryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LibraryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/library.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/library.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/reviews.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/reviews.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -241,7 +243,7 @@
       <workItem from="1603722609425" duration="8771000" />
       <workItem from="1603739308609" duration="9102000" />
       <workItem from="1603803177530" duration="11854000" />
-      <workItem from="1603823485523" duration="3064000" />
+      <workItem from="1603823485523" duration="9653000" />
     </task>
     <task id="LOCAL-00001" summary="``````">
       <created>1603473053337</created>
@@ -278,7 +280,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603811937736</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="table + delete">
+      <created>1603826978459</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1603826978459</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -302,7 +311,8 @@
     <MESSAGE value="release check link user-org" />
     <MESSAGE value="Profile+root for admin" />
     <MESSAGE value="piece of lib" />
-    <option name="LAST_COMMIT_MESSAGE" value="piece of lib" />
+    <MESSAGE value="table + delete" />
+    <option name="LAST_COMMIT_MESSAGE" value="table + delete" />
   </component>
   <component name="WindowStateProjectService">
     <state x="492" y="276" width="444" height="249" key="#Composer" timestamp="1602707507152">
@@ -369,10 +379,10 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state width="623" height="446" key="SwitcherDM/72.27.1848.1053/1920.0.1440.810@72.27.1848.1053" timestamp="1603825401156" />
-    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1603826369730">
+    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1603826980367">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1848.1053/1920.0.1440.810@72.27.1848.1053" timestamp="1603826369730" />
+    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1848.1053/1920.0.1440.810@72.27.1848.1053" timestamp="1603826980367" />
     <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1603749363141" />
     <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1848.1053@72.27.1848.1053" timestamp="1603488500404" />
     <state x="172" y="127" width="1638" height="860" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1603724817333">
@@ -392,19 +402,19 @@
       <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state x="72" y="27" width="1248" height="697" key="dock-window-1/72.27.1294.741@72.27.1294.741" timestamp="1602764930841" />
-    <state x="516" y="236" width="960" height="963" key="run.anything.popup" timestamp="1603814290261">
+    <state x="516" y="236" width="960" height="963" key="run.anything.popup" timestamp="1603832866479">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="383" y="174" width="672" height="677" key="run.anything.popup/72.27.1294.741@72.27.1294.741" timestamp="1603310842390" />
-    <state x="516" y="236" width="960" height="963" key="run.anything.popup/72.27.1848.1053/1920.0.1440.810@72.27.1848.1053" timestamp="1603814290261" />
+    <state x="516" y="236" width="960" height="963" key="run.anything.popup/72.27.1848.1053/1920.0.1440.810@72.27.1848.1053" timestamp="1603832866479" />
     <state x="516" y="236" width="960" height="963" key="run.anything.popup/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1603724750487" />
     <state x="516" y="236" width="960" height="963" key="run.anything.popup/72.27.1848.1053@72.27.1848.1053" timestamp="1603480737802" />
-    <state x="515" y="115" width="961" height="964" key="search.everywhere.popup" timestamp="1603825952147">
+    <state x="515" y="115" width="961" height="964" key="search.everywhere.popup" timestamp="1603832999585">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="376" y="89" width="677" height="678" key="search.everywhere.popup/64.27.1302.741@64.27.1302.741" timestamp="1603380156018" />
     <state x="382" y="89" width="672" height="678" key="search.everywhere.popup/72.27.1294.741@72.27.1294.741" timestamp="1603310740195" />
-    <state x="515" y="115" width="961" height="964" key="search.everywhere.popup/72.27.1848.1053/1920.0.1440.810@72.27.1848.1053" timestamp="1603825952147" />
+    <state x="515" y="115" width="961" height="964" key="search.everywhere.popup/72.27.1848.1053/1920.0.1440.810@72.27.1848.1053" timestamp="1603832999585" />
     <state x="515" y="115" width="961" height="964" key="search.everywhere.popup/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1603744669034" />
     <state x="515" y="115" width="961" height="964" key="search.everywhere.popup/72.27.1848.1053@72.27.1848.1053" timestamp="1603495078205" />
     <state x="603" y="431" width="540" height="179" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1603480233942">
@@ -413,6 +423,17 @@
     <state x="438" y="311" width="540" height="179" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/64.27.1302.741@64.27.1302.741" timestamp="1603380158342" />
     <state x="444" y="311" width="540" height="179" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/72.27.1294.741@72.27.1294.741" timestamp="1603309412019" />
     <state x="603" y="431" width="540" height="179" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1603480233942" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Exceptions/Handler.php</url>
+          <line>6</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/laravelwithdb@laravelwithdb.xml" NAME="laravelwithdb Coverage Results" MODIFIED="1603380810657" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

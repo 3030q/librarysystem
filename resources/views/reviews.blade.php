@@ -46,6 +46,6 @@
                 <p>{{ $el->returned_at}}</p>
             @endif
 
-        </div>
+
     @endforeach
 @endsection

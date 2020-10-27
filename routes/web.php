@@ -43,6 +43,11 @@ Route::get('/library', 'App\Http\Controllers\LibraryController@libraryView')->na
 Route::post('/addtolibrary', 'App\Http\Controllers\LibraryController@addToLibrary');
 Route::post('/deletebook', 'App\Http\Controllers\LibraryController@DeleteBook');
 
+Route::get('/records', 'App\Http\Controllers\RecordController@RecordView')->name('record');
+Route::post('/records/addrecord', 'App\Http\Controllers\RecordController@AddRecord');
+Route::post('/records/returnbook', 'App\Http\Controllers\RecordController@ReturnBook');
+Route::post('/records/delete', 'App\Http\Controllers\RecordController@Delete');
+
 
 Auth::routes();
 
