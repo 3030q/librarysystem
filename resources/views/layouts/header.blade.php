@@ -32,9 +32,6 @@
                     <div class="col-sm ">
                         <a class="nav-item btn btn btn-success" href="/">Home</a>
                     </div>
-                    <div class="col-sm" >
-                        <a class="nav-item btn btn btn-success" href="/about">Readers</a>
-                    </div>
 
                     <div class="col-sm nav-item btn btn btn-success">
                         <a class="text-white" href="{{route('login')}}">{{ __('Login') }}</a>
@@ -49,30 +46,45 @@
                 </div>
                 @endif
                  @else
-                    <div class="nav-item dropdown btn btn-info text-white">
-                       <a id="navbarDropdown" class="nav-link dropdown-toggle text-white" href="{{ route('logout') }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                            {{ Auth::user()->first_name }}
-                        </a>
+                    <div class="row">
+                        @if(Auth::user()->role === 'admin')
+                            <div class="col-sm ">
+                                <a class="p-3 nav-item btn btn btn-success" href="/library">Library</a>
+                            </div>
+                            <div class="col-sm" >
+                                <a class="p-3 nav-item btn btn btn-success" href="/about">Readers</a>
+                            </div>
 
-                        <div class="dropdown-menu dropdown-menu-right btn btn-success text-white " aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="/profile"
-                               onclick="event.preventDefault();
-                                                         document.getElementById('ref').submit();">
-                                {{ __('Profile') }}
+                        @endif
+
+
+                        <div class="nav-item dropdown btn btn-info text-white col-sm">
+                           <a id="navbarDropdown" class="nav-link dropdown-toggle text-white" href="{{ route('logout') }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{ Auth::user()->first_name }}
                             </a>
-                            <form id="ref" action="/profile" method="GET" class="d-none">
-                                @csrf
-                            </form>
-                            <a class="dropdown-item" href="{{ route('logout') }}"
-                               onclick="event.preventDefault();
-                                                         document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
-                            </a>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                @csrf
-                            </form>
+
+                            <div class="dropdown-menu dropdown-menu-right btn btn-success text-white " aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="/profile"
+                                   onclick="event.preventDefault();
+                                                             document.getElementById('ref').submit();">
+                                    {{ __('Profile') }}
+                                </a>
+                                <form id="ref" action="/profile" method="GET" class="d-none">
+                                    @csrf
+                                </form>
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                   onclick="event.preventDefault();
+                                                             document.getElementById('logout-form').submit();">
+                                    {{ __('Logout') }}
+                                </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                            </div>
+
+
                         </div>
-                    </div>
+                </div>
             @endguest
         </div>
     </nav>

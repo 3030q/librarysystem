@@ -39,6 +39,10 @@ Route::post('/adminconfirmreq', 'App\Http\Controllers\AdminConfirmController@adm
 
 
 
+Route::get('/library', 'App\Http\Controllers\LibraryController@libraryView')->name('library');
+Route::post('/addbook', 'App\Http\Controllers\LibraryController@addToLibrary');
+
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
