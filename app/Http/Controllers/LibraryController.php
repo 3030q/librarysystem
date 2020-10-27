@@ -40,4 +40,24 @@ class LibraryController extends Controller
 
         return redirect()->route('library');
     }
+
+    public function DeleteBook(Request $request){
+        $request->validate([
+            'titlefordelete' => ['required', 'string'],
+            'count_for_delete' => ['required', 'int']
+        ]);
+        $var = Book::where('organization_id', Auth::user()->organization_id)->where('title', $request->titlefordelete)
+            ->first('count_in_organization');
+        echo $var;
+        if($var['count_in_organization'] > $request->count_for_delete){
+            Book::where('organization_id', (Auth::user()->organization_id))->where('title', $request->titlefordelete)
+                ->update(['count_in_organization'=>$var['count_in_organization']-$request->count_for_delete]);
+        }else{
+            Book::where('organization_id', Auth::user()->organization_id)->where('title', $request->titlefordelete)->delete();
+        }
+        return redirect()->route('library');
+
+
+
+    }
 }

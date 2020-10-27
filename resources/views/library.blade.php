@@ -4,7 +4,7 @@
 
     <h1>Add book to library</h1>
 
-    <form method="POST" action="/addbook">
+    <form method="POST" action="/addtolibrary">
         @csrf
         <input type="text" name="title" id="title" placeholder="Title of the book" class="form-control"><br>
         <input type="text" name="author" id="author" placeholder="Author" class="form-control"><br>
@@ -13,9 +13,23 @@
         <input type="date" name="pub_date" id="pub_date"  placeholder="Pub date"><br>
         <label for="count_in_organization"> Count </label>
         <input type="text" name="count_in_organization" id="count_in_organization"><br>
-        <button type="submit" class="btn btn-success">submit</button>
+        <button type="submit" class="btn btn-success">Add</button>
     </form>
     <br>
+    <br>
+    <h1>Delete book from library</h1>
+    <form method="post" action="/deletebook">
+        @csrf
+        <input type="text" name="titlefordelete" id="titlefordelete" placeholder="Name of delete book">
+        <input type="text" name="count_for_delete" id="count_for_delete" placeholder="Count for delete">
+        <button type="submit" class="badge-danger">
+            Remove
+        </button>
+    </form>
+    <br>
+    <br>
+    <br>
+    <h1>Table of all books in library</h1>
     <div class=" text-black-50">
     <table bgcolor="#ffebcd" border="1">
         <tr>
@@ -24,7 +38,6 @@
             <th style="text-align:center">Publisher</th>
             <th style="text-align:center">Pub Date</th>
             <th style="text-align:center">Count in Library</th>
-            <th style="text-align:center">Delete </th>
         </tr>
     @foreach(\App\Models\Book::where('organization_id',Auth::user()->organization_id)->get() as $element)
         <tr>
@@ -33,12 +46,6 @@
             <th style="text-align:center">{{$element->publisher}}</th>
             <th style="text-align:center">{{$element->pub_date}}</th>
             <th style="text-align:center">{{$element->count_in_organization}}</th>
-            <th>
-                <form method="post" action="/deletef">
-                    <input type="text" name="count_for_delete" id="count_for_delete" placeholder="Remove from library">
-                    <button type="submit">
-                        AAA
-                    </button></form></th>
         </tr>
 
     @endforeach

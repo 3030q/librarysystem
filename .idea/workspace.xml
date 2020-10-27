@@ -29,7 +29,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d61122eb-1b28-4251-9d82-0b76dc4e1487" name="Default Changelist" comment="piece of lib">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LibraryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LibraryController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/library.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/library.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -239,6 +241,7 @@
       <workItem from="1603722609425" duration="8771000" />
       <workItem from="1603739308609" duration="9102000" />
       <workItem from="1603803177530" duration="11854000" />
+      <workItem from="1603823485523" duration="3064000" />
     </task>
     <task id="LOCAL-00001" summary="``````">
       <created>1603473053337</created>
@@ -362,10 +365,14 @@
     </state>
     <state x="204" y="31" width="1022" height="737" key="SettingsEditor/64.27.1302.741@64.27.1302.741" timestamp="1603380242969" />
     <state x="271" y="32" width="1022" height="737" key="SettingsEditor/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1603640125681" />
-    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1603816420540">
+    <state width="623" height="446" key="SwitcherDM" timestamp="1603825401156">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1848.1053/1920.0.1440.810@72.27.1848.1053" timestamp="1603816420540" />
+    <state width="623" height="446" key="SwitcherDM/72.27.1848.1053/1920.0.1440.810@72.27.1848.1053" timestamp="1603825401156" />
+    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1603826369730">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1848.1053/1920.0.1440.810@72.27.1848.1053" timestamp="1603826369730" />
     <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1603749363141" />
     <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1848.1053@72.27.1848.1053" timestamp="1603488500404" />
     <state x="172" y="127" width="1638" height="860" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1603724817333">
@@ -392,12 +399,12 @@
     <state x="516" y="236" width="960" height="963" key="run.anything.popup/72.27.1848.1053/1920.0.1440.810@72.27.1848.1053" timestamp="1603814290261" />
     <state x="516" y="236" width="960" height="963" key="run.anything.popup/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1603724750487" />
     <state x="516" y="236" width="960" height="963" key="run.anything.popup/72.27.1848.1053@72.27.1848.1053" timestamp="1603480737802" />
-    <state x="515" y="115" width="961" height="964" key="search.everywhere.popup" timestamp="1603814166325">
+    <state x="515" y="115" width="961" height="964" key="search.everywhere.popup" timestamp="1603825952147">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="376" y="89" width="677" height="678" key="search.everywhere.popup/64.27.1302.741@64.27.1302.741" timestamp="1603380156018" />
     <state x="382" y="89" width="672" height="678" key="search.everywhere.popup/72.27.1294.741@72.27.1294.741" timestamp="1603310740195" />
-    <state x="515" y="115" width="961" height="964" key="search.everywhere.popup/72.27.1848.1053/1920.0.1440.810@72.27.1848.1053" timestamp="1603814166325" />
+    <state x="515" y="115" width="961" height="964" key="search.everywhere.popup/72.27.1848.1053/1920.0.1440.810@72.27.1848.1053" timestamp="1603825952147" />
     <state x="515" y="115" width="961" height="964" key="search.everywhere.popup/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1603744669034" />
     <state x="515" y="115" width="961" height="964" key="search.everywhere.popup/72.27.1848.1053@72.27.1848.1053" timestamp="1603495078205" />
     <state x="603" y="431" width="540" height="179" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1603480233942">

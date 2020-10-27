@@ -40,7 +40,8 @@ Route::post('/adminconfirmreq', 'App\Http\Controllers\AdminConfirmController@adm
 
 
 Route::get('/library', 'App\Http\Controllers\LibraryController@libraryView')->name('library');
-Route::post('/addbook', 'App\Http\Controllers\LibraryController@addToLibrary');
+Route::post('/addtolibrary', 'App\Http\Controllers\LibraryController@addToLibrary');
+Route::post('/deletebook', 'App\Http\Controllers\LibraryController@DeleteBook');
 
 
 Auth::routes();
