@@ -16,6 +16,35 @@
         <button type="submit" class="btn btn-success">submit</button>
     </form>
     <br>
+    <div class=" text-black-50">
+    <table bgcolor="#ffebcd" border="1">
+        <tr>
+            <th style="text-align:center">Title</th>
+            <th style="text-align:center">Author</th>
+            <th style="text-align:center">Publisher</th>
+            <th style="text-align:center">Pub Date</th>
+            <th style="text-align:center">Count in Library</th>
+            <th style="text-align:center">Delete </th>
+        </tr>
+    @foreach(\App\Models\Book::where('organization_id',Auth::user()->organization_id)->get() as $element)
+        <tr>
+            <th style="text-align:center">{{$element->title}}</th>
+            <th style="text-align:center">{{$element->author}}</th>
+            <th style="text-align:center">{{$element->publisher}}</th>
+            <th style="text-align:center">{{$element->pub_date}}</th>
+            <th style="text-align:center">{{$element->count_in_organization}}</th>
+            <th>
+                <form method="post" action="/deletef">
+                    <input type="text" name="count_for_delete" id="count_for_delete" placeholder="Remove from library">
+                    <button type="submit">
+                        AAA
+                    </button></form></th>
+        </tr>
+
+    @endforeach
+    </table>
+    </div>
+
     {{--<h1>Взятые книжки</h1>
     @foreach($record as $el)
 
