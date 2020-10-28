@@ -14,6 +14,7 @@ use App\Http\Controllers\RegisterUserController;
 */
 
 Route::get('/', 'App\Http\Controllers\MainController@home')->name('homesus');
+
 Route::middleware('auth')->group(function (){
     Route::prefix('allogs')->group(function (){
         Route::get('/', 'App\Http\Controllers\MainController@allogs')->name('logs');
@@ -38,15 +39,29 @@ Route::get('/adminconfirm', 'App\Http\Controllers\AdminConfirmController@adminCo
 Route::post('/adminconfirmreq', 'App\Http\Controllers\AdminConfirmController@adminConfirmReq');
 
 
+Route::middleware('auth')->group(function () {
+    Route::prefix('library')->group(function () {
+        Route::get('/', 'App\Http\Controllers\LibraryController@libraryView')->name('library');
+        Route::post('/add', 'App\Http\Controllers\LibraryController@addToLibrary');
+        Route::post('/deletebook', 'App\Http\Controllers\LibraryController@DeleteBook');
+    });
+});
 
-Route::get('/library', 'App\Http\Controllers\LibraryController@libraryView')->name('library');
-Route::post('/addtolibrary', 'App\Http\Controllers\LibraryController@addToLibrary');
-Route::post('/deletebook', 'App\Http\Controllers\LibraryController@DeleteBook');
+Route::middleware('auth')->group(function (){
+    Route::prefix('records')->group(function (){
+        Route::get('/', 'App\Http\Controllers\RecordController@RecordView')->name('record');
+        Route::post('/addrecord', 'App\Http\Controllers\RecordController@AddRecord');
+        Route::post('/returnbook', 'App\Http\Controllers\RecordController@ReturnBook');
+        Route::post('/delete', 'App\Http\Controllers\RecordController@Delete');
+    });
+});
 
-Route::get('/records', 'App\Http\Controllers\RecordController@RecordView')->name('record');
-Route::post('/records/addrecord', 'App\Http\Controllers\RecordController@AddRecord');
-Route::post('/records/returnbook', 'App\Http\Controllers\RecordController@ReturnBook');
-Route::post('/records/delete', 'App\Http\Controllers\RecordController@Delete');
+Route::middleware('auth')->group(function (){
+   Route::get('/readers', 'App\Http\Controllers\ReaderController@ReaderView');
+});
+
+
+
 
 
 Auth::routes();

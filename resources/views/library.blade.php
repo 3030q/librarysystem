@@ -4,7 +4,7 @@
 
     <h1>Add book to library</h1>
 
-    <form method="POST" action="/addtolibrary">
+    <form method="POST" action="/library/add">
         @csrf
         <input type="text" name="title" id="title" placeholder="Title of the book" class="form-control"><br>
         <input type="text" name="author" id="author" placeholder="Author" class="form-control"><br>
@@ -18,7 +18,7 @@
     <br>
     <br>
     <h1>Delete book from library</h1>
-    <form method="post" action="/deletebook">
+    <form method="post" action="/library/deletebook">
         @csrf
         <input type="text" name="titlefordelete" id="titlefordelete" placeholder="Name of delete book">
         <input type="text" name="count_for_delete" id="count_for_delete" placeholder="Count for delete">

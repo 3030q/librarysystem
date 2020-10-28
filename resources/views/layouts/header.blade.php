@@ -49,7 +49,7 @@
                                 <a class="p-3 nav-item btn btn btn-success" href="/library">Library</a>
                             </div>
                             <div class="col-sm" >
-                                <a class="p-3 nav-item btn btn btn-success" href="/about">Readers</a>
+                                <a class="p-3 nav-item btn btn btn-success" href="/readers">Readers</a>
                             </div>
 
                         @endif
