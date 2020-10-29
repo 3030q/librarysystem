@@ -43,7 +43,7 @@
         @endif--}}
     @endforeach
     @else
-        <h1>Взять книгу</h1>
+        <h1>Take book</h1>
         <form method="post" action="/records/addrecord">
         @csrf
         <input type="text" name="book" id="book" placeholder="Введите название книги" class="form-control"><br>
@@ -53,20 +53,46 @@
         <br>
         <br>
         <br>
-        <h1>Взятые книги</h1>
+        <h1>Taken books</h1>
         @foreach(\App\Models\Record::where('user_id', Auth::user()->id)->get() as $element)
         <div class="alert alert-warning">
             <h2>Title of book</h2>
             <h3>{{\App\Models\Book::where('id', $element->book_id)->first('title')['title']}}</h3>
+            <h2>Author</h2>
+            <h3>{{\App\Models\Book::where('id', $element->book_id)->first('author')['author']}}</h3>
             <h2>Date of take</h2>
             <h3>{{$element->date_take}}</h3>
 
             @if($element->date_returned != null)
-                <h3>Дата возврата</h3>
+                <h3>Date of return</h3>
                 <p>{{ $element->date_returned}}</p>
             @endif
         </div>
         @endforeach
+        <br>
+        <br>
+        <br>
+        <h1>Table of all books in library</h1>
+        <div class=" text-black-50">
+            <table bgcolor="#ffebcd" border="1">
+                <tr>
+                    <th style="text-align:center">Title</th>
+                    <th style="text-align:center">Author</th>
+                    <th style="text-align:center">Publisher</th>
+                    <th style="text-align:center">Pub Date</th>
+                    <th style="text-align:center">Count in Library</th>
+                </tr>
+                @foreach(\App\Models\Book::where('organization_id',Auth::user()->organization_id)->get() as $element)
+                    <tr>
+                        <th style="text-align:center">{{$element->title}}</th>
+                        <th style="text-align:center">{{$element->author}}</th>
+                        <th style="text-align:center">{{$element->publisher}}</th>
+                        <th style="text-align:center">{{$element->pub_date}}</th>
+                        <th style="text-align:center">{{$element->count_in_organization}}</th>
+                    </tr>
+
+                @endforeach
+            </table>
     @endif
 
 
