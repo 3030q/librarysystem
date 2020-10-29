@@ -2,13 +2,17 @@
 
 @section('main_content')
     @if(Auth::user()->role === 'admin')
-    <h1>Все записи</h1>
+    <h1>All records</h1>
     @foreach(\App\Models\Record::where('organization_id', Auth::user()->organization_id)->get() as $element)
         <div class="alert alert-warning">
             <h2>Title of book</h2>
             <h3>{{\App\Models\Book::where('id', $element->book_id)->first('title')['title']}}</h3>
             <h2>Date of take</h2>
             <h3>{{$element->date_take}}</h3>
+            <h2>Name</h2>
+            <h3>{{\App\Models\User::where('id', $element->user_id)->first('first_name')['first_name']}}</h3>
+            <h2>Surname</h2>
+            <h3>{{\App\Models\User::where('id', $element->user_id)->first('last_name')['last_name']}}</h3>
             @if($element->date_returned === null)
             <form method="post" action="/records/returnbook?id={{$element->id}}">
                 @csrf

@@ -27,10 +27,11 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d61122eb-1b28-4251-9d82-0b76dc4e1487" name="Default Changelist" comment="readers + refactor route">
+    <list default="true" id="d61122eb-1b28-4251-9d82-0b76dc4e1487" name="Default Changelist" comment="table for readers in takebookview">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/reader.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/reader.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/record.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/record.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -242,7 +243,8 @@
       <workItem from="1603803177530" duration="11854000" />
       <workItem from="1603823485523" duration="9960000" />
       <workItem from="1603925706408" duration="1648000" />
-      <workItem from="1603960125695" duration="306000" />
+      <workItem from="1603960125695" duration="436000" />
+      <workItem from="1603960578360" duration="479000" />
     </task>
     <task id="LOCAL-00001" summary="``````">
       <created>1603473053337</created>
@@ -300,7 +302,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603927307989</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="table for readers in takebookview">
+      <created>1603960549326</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1603960549326</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -327,7 +336,8 @@
     <MESSAGE value="table + delete" />
     <MESSAGE value="record + fix views" />
     <MESSAGE value="readers + refactor route" />
-    <option name="LAST_COMMIT_MESSAGE" value="readers + refactor route" />
+    <MESSAGE value="table for readers in takebookview" />
+    <option name="LAST_COMMIT_MESSAGE" value="table for readers in takebookview" />
   </component>
   <component name="WindowStateProjectService">
     <state x="492" y="276" width="444" height="249" key="#Composer" timestamp="1602707507152">
@@ -394,10 +404,10 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state width="623" height="446" key="SwitcherDM/72.27.1848.1053/1920.0.1440.810@72.27.1848.1053" timestamp="1603825401156" />
-    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1603927309745">
+    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1603960551489">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1848.1053/1920.0.1440.810@72.27.1848.1053" timestamp="1603927309745" />
+    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1848.1053/1920.0.1440.810@72.27.1848.1053" timestamp="1603960551489" />
     <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1603749363141" />
     <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1848.1053@72.27.1848.1053" timestamp="1603488500404" />
     <state x="172" y="127" width="1638" height="860" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1603724817333">

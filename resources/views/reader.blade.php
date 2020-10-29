@@ -11,7 +11,7 @@
                 <th style="text-align:center">Surname</th>
                 <th style="text-align:center">Email</th>
                 <th style="text-align:center">Phone number</th>
-                <th style="text-align:center">Rolel</th>
+                <th style="text-align:center">Role</th>
             </tr>
             @foreach(\App\Models\User::where('organization_id',Auth::user()->organization_id)->get() as $element)
                 <tr>
