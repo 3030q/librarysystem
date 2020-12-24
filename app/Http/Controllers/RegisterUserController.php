@@ -24,8 +24,7 @@ class RegisterUserController extends Controller
             'last_name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'phone_number'=>['required', 'string', 'min:11', 'max:11'],
-            'organization_name'=>['string', 'min:3','max:10'],
+            'organization_name'=>['string', 'min:3'],
             'key'=>['string'],
         ]);
 
@@ -34,7 +33,6 @@ class RegisterUserController extends Controller
         $user->last_name = $request->last_name;
         $user->email = $request->email;
         $user->password = Hash::make($request->password);
-        $user->phone_number = $request->phone_number;
         try{
             $model = Organization::query()->where('name',$request->organization_name)->where('key', $request->key)->first('id');
         }catch(\Exception $exception){
@@ -44,7 +42,7 @@ class RegisterUserController extends Controller
             $user->organization_id = $model['id'];
         }
         $user->save();
-        return redirect()->route('homesus');
+        return redirect()->route('login', ['password'=>$request->password,'email'=>$request->email]);
     }
 
 }

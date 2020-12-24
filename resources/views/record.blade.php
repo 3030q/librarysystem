@@ -2,101 +2,58 @@
 
 @section('main_content')
     @if(Auth::user()->role === 'admin')
-    <h1>All records</h1>
-    @foreach(\App\Models\Record::where('organization_id', Auth::user()->organization_id)->get() as $element)
-        <div class="alert alert-warning">
-            <h2>Title of book</h2>
-            <h3>{{\App\Models\Book::where('id', $element->book_id)->first('title')['title']}}</h3>
-            <h2>Date of take</h2>
-            <h3>{{$element->date_take}}</h3>
-            <h2>Name</h2>
-            <h3>{{\App\Models\User::where('id', $element->user_id)->first('first_name')['first_name']}}</h3>
-            <h2>Surname</h2>
-            <h3>{{\App\Models\User::where('id', $element->user_id)->first('last_name')['last_name']}}</h3>
-            @if($element->date_returned === null)
-            <form method="post" action="/records/returnbook?id={{$element->id}}">
-                @csrf
-                <input type="date" name="date_returned" id="date_returned" >
-                <button type="submit" class="btn btn-danger">Returned book</button>
-            </form>
-            @else
-                <h3>Дата возврата</h3>
-                <p>{{ $element->date_returned}}</p>
-            @endif
-            <form method="post" action="/records/delete?id={{$element->id}}">
-                @csrf
-                <button type="submit" class="btn btn-danger">Delete record</button>
-            </form>
-        </div>
-        {{--<b>{{ $el->last_name}}</b>
-        <p>{{ $el->first_name}}</p>
-        <h3>Дата выдачи</h3>
-        <p>{{ $el->dateOfTake}}</p>
-        <form method="post" action="/allogs/takeDateReturn?id={{$el->id}}">
-            @csrf
-            <input type="date" name="returned_at" id="returned_at" class="">
-            <button type="submit" class="btn btn-danger">Вернуть книгу</button>
-        </form>
-        <form method="post" action="/allogs/delete?id={{$el->id}}">
-            @csrf
-            <button type="submit" class="btn btn-danger">Удалить в БД</button>
-        </form>
-        @if($el->returned_at != null)
-            <h3>Дата возврата</h3>
-            <p>{{ $el->returned_at}}</p>
-        @endif--}}
-    @endforeach
-    @else
-        <h1>Take book</h1>
-        <form method="post" action="/records/addrecord">
-        @csrf
-        <input type="text" name="book" id="book" placeholder="Введите название книги" class="form-control"><br>
-        <input type="date" name="date_take" id="date_take"  placeholder="Дата"><br>
-        <button type="submit" class="btn btn-success">Отправить</button>
-        </form>
-        <br>
-        <br>
-        <br>
-        <h1>Taken books</h1>
-        @foreach(\App\Models\Record::where('user_id', Auth::user()->id)->get() as $element)
-        <div class="alert alert-warning">
-            <h2>Title of book</h2>
-            <h3>{{\App\Models\Book::where('id', $element->book_id)->first('title')['title']}}</h3>
-            <h2>Author</h2>
-            <h3>{{\App\Models\Book::where('id', $element->book_id)->first('author')['author']}}</h3>
-            <h2>Date of take</h2>
-            <h3>{{$element->date_take}}</h3>
 
-            @if($element->date_returned != null)
-                <h3>Date of return</h3>
-                <p>{{ $element->date_returned}}</p>
-            @endif
-        </div>
-        @endforeach
-        <br>
-        <br>
-        <br>
-        <h1>Table of all books in library</h1>
-        <div class=" text-black-50">
-            <table bgcolor="#ffebcd" border="1">
-                <tr>
-                    <th style="text-align:center">Title</th>
-                    <th style="text-align:center">Author</th>
-                    <th style="text-align:center">Publisher</th>
-                    <th style="text-align:center">Pub Date</th>
-                    <th style="text-align:center">Count in Library</th>
-                </tr>
-                @foreach(\App\Models\Book::where('organization_id',Auth::user()->organization_id)->get() as $element)
-                    <tr>
-                        <th style="text-align:center">{{$element->title}}</th>
-                        <th style="text-align:center">{{$element->author}}</th>
-                        <th style="text-align:center">{{$element->publisher}}</th>
-                        <th style="text-align:center">{{$element->pub_date}}</th>
-                        <th style="text-align:center">{{$element->count_in_organization}}</th>
-                    </tr>
-
-                @endforeach
-            </table>
+        <div class="container">
+            <h2>Search By Record Number</h2><br>
+            <form method="Post" class="form-inline my-2 my-lg-0" action={{"/records/idfilter"}}>
+                @CSRF
+                <div class="form-group">
+                    <input class="form-control mr-sm-2" type="text" name="id" id="id"
+                           placeholder="Record № for search">
+                    <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+                </div>
+            </form>
+            <br>
+            <h2>Filter Record</h2>
+            <div class="container">
+                <div class="row">
+                    <a href="/records"><button type="button" class="btn btn-dark mt-3 ml-0 ">Show all</button></a>
+                    <a href="/records?filter[not_returned]=false"><button type="button" class="btn btn-dark mt-3 ml-2 ">Show non-active record</button></a>
+                    <br>
+                    <a href="/records?filter[not_returned]=true"><button type="button" class="btn btn-dark mt-3 ml-2 ">Show active record</button></a>
+                </div>
+            </div>
+            <br>
+            <h1>Table of record</h1>
+            <div class=" text-black-50">
+                @if(\Illuminate\Support\Facades\Auth::user()->role === 'admin')
+                    <table class="table table-light rounded">
+                        <thead class="thead-dark">
+                        <tr>
+                            <th style="text-align:center">#</th>
+                            <th style="text-align:center">User surname</th>
+                            <th style="text-align:center">Book title</th>
+                            <th style="text-align:center">Date of take</th>
+                            <th style="text-align:center">Date of returned</th>
+                        </tr>
+                        </thead>
+                        @foreach($record as $element)
+                            <tr>
+                                <td style="text-align:center">{{$element->id}}</td>
+                                <td style="text-align:center">{{\App\Models\User::query()->where('id',$element->user_id)->firstOrFail('last_name')['last_name']}}</td>
+                                <td style="text-align:center">{{\App\Models\Book::query()->where('id', $element->book_id)->firstOrFail('title')['title']}}</td>
+                                <td style="text-align:center">{{$element->date_take}}</td>
+                                <td style="text-align:center" class="align-items-center">
+                                    @if($element->date_returned == null)
+                                        <a methods="POSTS" href={{"/records/return/".$element->id}}><button type="button" class="btn btn-dark pr-3 pl-3 pb-0 pt-0">Return</button></a>
+                                    @else
+                                        {{$element->date_returned}}
+                                    @endif</td>
+                            </tr>
+                        @endforeach
+                    </table>
+                @endif
+            </div>
     @endif
 
 

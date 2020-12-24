@@ -7,8 +7,6 @@
         <h1 class="text-center font-weight-bold">{{Auth::user()->first_name}}</h1>
         <h2 class="text-center">Surname:</h2>
         <h1 class="text-center text-center font-weight-bold">{{Auth::user()->last_name}}</h1>
-        <h2 class="text-center">Phone Number</h2>
-        <h1 class="text-center font-weight-bold">{{Auth::user()->phone_number}}</h1>
         @if(Auth::user()->organization_id != null)
             <div>
                 <h2 class="text-center">Organization name</h2>
@@ -20,11 +18,10 @@
                 </h1>
             </div>
         @endif
+        <h2 class="text-center">Role in organization</h2>
         @if(Auth::user()->role === 'admin')
-            <h2 class="text-center">Role in organization</h2>
             <h1 class="text-center font-weight-bold">Admin</h1>
         @else
-            <h2 class="text-center">Role in organization</h2>
             <h1 class="text-center font-weight-bold">User</h1>
         @endif
         <div class="font-size text-md-center te">

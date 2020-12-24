@@ -29,7 +29,6 @@ class MainController extends Controller
     }
 
 
-
     public function allogs_check(Request $request){
         $valid = $request->validate([
             'book'=>'required|min:2|max:45',

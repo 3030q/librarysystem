@@ -17,82 +17,64 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
-<body class="bg-dark text-white">
+<body class="bg-info text-white">
 
-<div class="d-flex flex-column flex-md-row align-items-center p-2 px-md-3 mb-3 bg-dark text-white border-bottom shadow-sm">
-    <a href="/"><img class="p-1" src="image/study.png" alt="icon" width="50" height="50" ></a>
-    <h5 class="my-0 mr-md-auto font-weight-normal">Librasystem</h5>
-    <nav class="my-2 my-md-0 mr-md-3">
-
-
-        <div class="navbar-nav ml-auto">
-            <!-- Authentication Links -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a href="/"><img class="p-1" src="/image/study.png" alt="icon" width="50" height="50"></a>
+    <a class="navbar-brand" href="/">Librarysystem</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ml-auto">
             @guest
-                <div class="row">
-
-                    <div class="col-sm nav-item btn btn btn-success">
-                        <a class="text-white" href="{{route('login')}}">{{ __('Login') }}</a>
-                    </div>
-
-                    <div class="col-sm">
-                    @if (Route::has('register'))
-                        <div class="col-sm nav-item btn btn btn-success">
-                            <a class="text-white" href="/userregister">{{ __('Register') }}</a>
-                        </div>
-                    </div>
-                </div>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{{route('login')}}">Login</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/userregister">Register</a>
+                </li>
+            @else
+                @if(Auth::user()->role == 'admin')
+                    <li class="nav-item">
+                        <a class="nav-link" href="/library">Library</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/readers">Readers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/records">All record</a>
+                    </li>
+                @else
+                    <li class="nav-item">
+                        <a class="nav-link" href="/library">Library</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/takenbook">Taken Book</a>
+                    </li>
                 @endif
-                 @else
-                    <div class="row">
-                        @if(Auth::user()->role === 'admin')
-                            <div class="col-sm ">
-                                <a class="p-3 nav-item btn btn btn-success" href="/library">Library</a>
-                            </div>
-                            <div class="col-sm" >
-                                <a class="p-3 nav-item btn btn btn-success" href="/readers">Readers</a>
-                            </div>
-
-                        @endif
-
-
-                        <div class="p-3 nav-item dropdown btn btn-info text-white">
-                           <a id="navbarDropdown" class="nav-link dropdown-toggle text-white" href="{{ route('logout') }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                {{ Auth::user()->first_name }}
-                            </a>
-
-                            <div class="dropdown-menu dropdown-menu-right btn btn-success text-white " aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="/profile"
-                                   onclick="event.preventDefault();
-                                                             document.getElementById('ref').submit();">
-                                    {{ __('Profile') }}
-                                </a>
-                                <form id="ref" action="/profile" method="GET" class="d-none">
-                                    @csrf
-                                </form>
-                                <a class="dropdown-item" href="{{ route('logout') }}"
-                                   onclick="event.preventDefault();
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">
+                        {{ Auth::user()->first_name }}
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="/profile">Profile</a>
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                           onclick="event.preventDefault();
                                                              document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
-                                </a>
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                    @csrf
-                                </form>
-                            </div>
-                        </div>
-                        @if(\Illuminate\Support\Facades\Auth::user()->role === 'admin')
-                            <div class="col-sm ">
-                                <a class="p-3 nav-item btn btn btn-info" href="/records">All records</a>
-                            </div>
-                        @else
-                            <div class="col-sm ">
-                                <a class="p-3 nav-item btn btn btn-info" href="/records">Take book</a>
-                            </div>
-                        @endif
-                </div>
+                            {{ __('Logout') }}
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                    </div>
+                </li>
             @endguest
-        </div>
-    </nav>
-</div>
+        </ul>
+    </div>
+</nav>
 <div class="container mt-5">
     @yield('main_content')
 </div>

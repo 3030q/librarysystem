@@ -23,6 +23,10 @@ class CreateBooksTable extends Migration
             $table->string('publisher')->nullable();
             $table->bigInteger('count_in_organization');
             $table->timestamps();
+            $table->text('book_description');
+            $table->string('book_image');
+
+
         });
     }
 

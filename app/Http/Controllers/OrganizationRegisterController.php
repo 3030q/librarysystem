@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\Organization;
@@ -9,6 +9,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 
 
@@ -26,7 +27,7 @@ class OrganizationRegisterController extends Controller
         $organization = new Organization();
         $organization->name = $request->name;
         $organization->key = $request->password;
-        $organization->admin_password = $request->admin_password;
+        $organization->admin_password = Hash::make($request->admin_password);
         $organization->save();
         return redirect()->route('homesus');
     }
